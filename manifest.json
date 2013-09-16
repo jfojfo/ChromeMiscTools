@@ -1,0 +1,23 @@
+{
+    "name": "Chrome misc tools",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "Chrome misc tools",
+    "permissions": ["activeTab"],
+    "background": {
+        "page": "background.html"
+    },
+    "browser_action": {
+        "default_title": "Chrome misc tools",
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": ["http://www.google.com.hk/search*", "https://www.google.com.hk/search*"],
+            "js": ["jquery-1.7.1.min.js", "GoogleSearchUrlFilter.js"],
+            "run_at": "document_end",
+            "all_frames": false
+        }
+    ],
+    "web_accessible_resources": ["jquery-1.7.1.min.js"]
+}
