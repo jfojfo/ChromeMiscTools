@@ -8,6 +8,10 @@ chrome.extension.onMessage.addListener(
         var html = $(tag).get(0).outerHTML;
         console.log("====html:", html);
         var baseurl = window.location.protocol + "//" + window.location.host;
+        var basetag = $("base");
+        if (basetag.length > 0) {
+            baseurl = basetag.attr("href") + "/";
+        }
         console.log("====baseurl:", baseurl);
         var meta = $('meta[http-equiv="content-type"]');
         if (meta.length > 0) {
