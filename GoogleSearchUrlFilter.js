@@ -13,4 +13,5 @@
         a.attr("onmousedown", null);
         console.log("Google Search Url filtered");
     }
+    console.log("Google Search Url Filter loaded.");
 })();

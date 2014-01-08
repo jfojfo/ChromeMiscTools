@@ -17,9 +17,7 @@
             "js": ["jquery-1.7.1.min.js", "GoogleSearchUrlFilter.js"],
             "run_at": "document_end",
             "all_frames": false
-        }
-    ],
-    "content_scripts": [
+        },
         {
             "matches": ["http://www.bjguahao.gov.cn/*"],
             "js": ["jquery-1.7.1.min.js", "GuaHao.js"],
