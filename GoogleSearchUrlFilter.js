@@ -13,6 +13,7 @@
             var j = $(this);
             var newBlock = $('<a style="display:block;float:left;" target="_blank" href="' + j.attr('href') + '"></a>');
             newBlock.append(j.html());
+            newBlock.append('<em>「✓」</em>');
             j.after(newBlock);
             j.hide();
         });
