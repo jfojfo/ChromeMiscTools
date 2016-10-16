@@ -25,9 +25,13 @@ chrome.extension.onMessage.addListener(
         console.log(msg);
         var cmd = msg.cmd;
         console.log("cmd:", cmd);
-        if (cmd == "flagFilterGoogleSearchUrl")
-            sendResponse(bg.filterGoogleSearchUrl || false);
-        else
+        if (cmd == "flagFilterGoogleSearchUrl") {
+            var flag = bg.filterGoogleSearchUrl;
+            if (flag == undefined)
+                flag = true;
+            sendResponse(flag);
+        } else {
             sendResponse("Unknown");
+        }
     }
 );

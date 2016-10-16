@@ -13,7 +13,13 @@
     },
     "content_scripts": [
         {
-            "matches": ["http://www.google.com.hk/search*", "https://www.google.com.hk/search*"],
+            "matches": ["http://www.google.com.hk/search*", 
+                        "https://www.google.com.hk/search*", 
+                        "https://www.google.com.hk/webhp*", 
+                        "http://www.google.co.jp/search*", 
+                        "https://www.google.co.jp/search*", 
+                        "http://www.google.com/search*", 
+                        "https://www.google.com/search*"],
             "js": ["jquery-1.7.1.min.js", "GoogleSearchUrlFilter.js"],
             "run_at": "document_end",
             "all_frames": false

@@ -61,7 +61,6 @@ function onToggleFilterGoogleSearchUrl() {
     if (bg.filterGoogleSearchUrl) {
         bg.filterGoogleSearchUrl = false;
         $(this).attr('checked', false);
-        return;
     } else {
         bg.filterGoogleSearchUrl = true;
         $(this).attr('checked', true);
